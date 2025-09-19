@@ -4,8 +4,8 @@ import { keyFeatures } from "../../keyFeatures";
 
 const Features = () => {
   return (
-    <div className="w-full p-15 flex justify-center items-center flex-col relative">
-      <div className="">
+    <div className="w-full p-15 bg-[#b241b7]/5 lg:bg-white flex justify-center items-center flex-col relative">
+      <div className="hidden lg:block">
         <div className="absolute bg-[#3d168b]/5 -left-0 top-0 w-100 h-120 blur-lg rounded-full z-30"></div>
         <div className="absolute bg-[#b241b7]/5 -right-0 top-0 w-100 h-120 blur-lg rounded-full z-30"></div>
       </div>
