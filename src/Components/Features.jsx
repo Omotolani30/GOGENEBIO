@@ -1,32 +1,36 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { keyFeatures } from "../../keyFeatures";
 
 const Features = () => {
-  const features = keyFeatures.map((feature) => (
-    <div
-      key={feature.description}
-      className="bg-[#F9FAFB] dark:bg-[#1E1E1E] text-black dark:text-white p-10 w-full sm:w-[45%] lg:w-[30%] h-[250px] flex flex-col justify-center items-center gap-3 rounded-lg shadow-md"
-    >
-      <img src={feature.icon} className="w-10" alt="Feature Icon" />
-      <div className="text-center font-semibold">{feature.feature}</div>
-      <div className="text-center text-[13px] text-gray-600 dark:text-gray-400">
-        {feature.description}
-      </div>
-    </div>
-  ));
-
   return (
-    <div className="bg-[#F3F4F6] dark:bg-[#181818] p-15 flex justify-center items-center flex-col">
-      <div className="flex bg-[#E5E7EB] dark:bg-[#1A1A1A] justify-between items-center py-2 px-4 rounded-3xl">
-        <p className="font-semibold text-[14px] text-[#9D3CA7]">
-          Our Key Features
-        </p>
-        <p className="ml-2">🔥</p>
+    <div className="w-full p-15 flex justify-center items-center flex-col relative">
+      <div className="">
+        <div className="absolute bg-[#3d168b]/5 -left-0 top-0 w-100 h-120 blur-lg rounded-full z-30"></div>
+        <div className="absolute bg-[#b241b7]/5 -right-0 top-0 w-100 h-120 blur-lg rounded-full z-30"></div>
+      </div>
+      <div className="bg-[#b241b7]/10 py-2 px-4 rounded-3xl">
+        <p className="font-semibold text-sm text-[#b241b7]">Our Key Features</p>
       </div>
 
-      <div className="w-full p-5 mt-10 flex gap-5 flex-wrap justify-center items-center">
-        {features}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 w-[100vw] px-8 lg:w-full lg:px-5 mt-10 z-50">
+        {/* {features} */}
+        {keyFeatures.map((feature, index) => (
+          <div
+            key={index}
+            className="border border-[#DFDFDFDF] transition duration-300 hover:shadow-md rounded-xl px-4 py-6 bg-white flex flex-col gap-4"
+          >
+            <h1 className="text-base font-semibold">{feature.feature}</h1>
+            <p className="text-sm">{feature.description}</p>
+          </div>
+        ))}
       </div>
+
+      <Link to="/form">
+        <button className=" w-full  text-white py-2 px-3 font-medium bg-linear-to-r from-[#b241b7] to-[#3d168b] rounded-full hover:bg-gradient-to-l hover:from-[#3d168b] hover:to-[#b241b7] cursor-pointer hover:translate-x-2 transition duration-300 text-sm mt-10 animate-bounce">
+          Register Now &rarr;
+        </button>
+      </Link>
     </div>
   );
 };

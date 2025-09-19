@@ -4,12 +4,14 @@ import About from "../Components/About";
 import Features from "../Components/Features";
 import ProgramBenefits from "../Components/ProgramBenefits";
 import Details from "../Components/Details";
+import SectionTwo from "../Components/SectionTwo";
 
-const Home = () => {
+const Home = ({ darkMode }) => {
   return (
     <div>
-      <Hero />
-      <About />
+      <Hero darkMode={darkMode}/>
+      <SectionTwo />
+      {/* <About /> */}
       <ProgramBenefits />
       <Details />
       <Features />

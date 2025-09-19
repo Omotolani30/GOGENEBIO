@@ -1,4 +1,4 @@
-import blackLogo from "../assets/Logo.png";
+import blackLogo from "../assets/logo_black.jpeg";
 
 const Footer = () => {
   return (

@@ -4,6 +4,7 @@ import Form from "./Pages/Form.jsx";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar.jsx";
 import Footer from "./Components/Footer.jsx";
+import Error from "./Pages/Error.jsx";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(() => {
@@ -24,13 +25,14 @@ const App = () => {
   }; 
   
   return (
-   <div>
-     <Navbar darkMode={darkMode} switchTheme={switchTheme} />
+   <div className="">
+     {/* <Navbar darkMode={darkMode} switchTheme={switchTheme} /> */}
       <Routes>
-        <Route path="/" element={<Home darkMode={darkMode} switchTheme={switchTheme}/>} />
+        <Route path="/" element={<Home darkMode={darkMode}/>} />
         <Route path="/form" element={<Form/>} />
+        <Route path="*" element={<Error/>} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
    </div>
   );
 };

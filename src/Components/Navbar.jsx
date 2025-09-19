@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../assets/Logo.png";
 import { IoMdSunny, IoMdMoon } from "react-icons/io";
 import { HiMenu, HiX } from "react-icons/hi";
+import logo_black from "../assets/logo_edit.png";
 
 const Navbar = ({ darkMode, switchTheme }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -12,10 +13,14 @@ const Navbar = ({ darkMode, switchTheme }) => {
   };
 
   return (
-    <nav className="flex justify-between items-center py-2 px-5 text-sm md:px-10 lg:px-20 dark:bg-[#040404] dark:text-white transition-all duration-400">
+    <nav className="flex justify-between items-center py-2 px-5 text-sm md:px-10 lg:px-20 relative z-50 dark:bg-[#040404] dark:text-white transition-all duration-400">
       {/* Logo */}
       <div className="flex items-center">
-        <img src={logo} className="h-10" alt="Logo" />
+        {darkMode ? (
+          <img src={logo_black} className="h-10" alt="Logo" />
+        ) : (
+          <img src={logo} className="h-10" alt="Logo" />
+        )}
       </div>
 
       {/* Desktop Menu */}
@@ -31,7 +36,7 @@ const Navbar = ({ darkMode, switchTheme }) => {
           </li>
           <li>
             <Link
-              to="/about"
+              to=""
               className="cursor-pointer hover:text-[#9D3CA7] transition-all duration-300"
             >
               About
@@ -39,7 +44,7 @@ const Navbar = ({ darkMode, switchTheme }) => {
           </li>
           <li>
             <Link
-              to="/research"
+              to=""
               className="cursor-pointer hover:text-[#9D3CA7] transition-all duration-300"
             >
               Research
@@ -47,7 +52,7 @@ const Navbar = ({ darkMode, switchTheme }) => {
           </li>
           <li>
             <Link
-              to="/education"
+              to=""
               className="cursor-pointer hover:text-[#9D3CA7] transition-all duration-300"
             >
               Education
@@ -55,7 +60,7 @@ const Navbar = ({ darkMode, switchTheme }) => {
           </li>
           <li>
             <Link
-              to="/partnership"
+              to=""
               className="cursor-pointer hover:text-[#9D3CA7] transition-all duration-300"
             >
               Partnership
@@ -69,13 +74,12 @@ const Navbar = ({ darkMode, switchTheme }) => {
         <button onClick={toggleMobileMenu} className="text-2xl text-[#9D3CA7]">
           {isMobileMenuOpen ? <HiX /> : <HiMenu />}
         </button>
-         <button
+        <button
           onClick={switchTheme}
           className="text-2xl text-[#9D3CA7] cursor-pointer transition duration-300"
         >
           {darkMode ? <IoMdSunny /> : <IoMdMoon />}
         </button>
-
       </div>
 
       {/* Mobile Menu */}

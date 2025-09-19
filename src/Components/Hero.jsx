@@ -1,45 +1,86 @@
 import React from "react";
-import collage from "../assets/genomics.png";
+import collage from "../assets/hero_img.png";
+import hero_black from "../assets/hero_black.png";
+import { TbCircleArrowDownFilled } from "react-icons/tb";
+// import hero_img from "../assets/outreach.png";
 import { Link } from "react-router-dom";
 
-const Hero = () => {
+const Hero = ({ darkMode }) => {
   return (
-    <div className="bg-gradient-to-r from-[#511E8C] to-[#9D3CA7] p-5 md:p-10 lg:p-15 flex flex-col md:flex-row items-center md:items-start dark:bg-[#040404] text-white transition duration-400">
-      <div className="w-full md:w-[60%] lg:w-[70%] md:mr-[-10rem] lg:mr-[-15rem] text-center md:text-left">
-        {/* <button className="flex border bg-[#7639a9] justify-center md:justify-between items-center p-2 rounded-3xl mx-auto md:mx-0 font-semibold border-none text-xs text-white"></button> */}
-        <div className="inline-block px-4 py-2 bg-white/10 rounded-full backdrop-blur-sm mb-0">
-          <span class="text-sm font-medium">
-            ✨ GOGeneBio — Your Bioinformatics Launchpad
-          </span>
+    <div className="bg-[#F7F7F7] dark:bg-[#000] flex justify-center lg:justify-between min-h-1 lg:min-h-screen py-10 px-8 lg:px-16 relative">
+      <div className="absolute -top-20 left-50 -translate-x-1/2 w-30 h-30 lg:w-60 lg:h-60 bg-[#f400ff] rounded-full blur-[100px] opacity-50 z-30"></div>
+      <div className="absolute top-50 right-2 -translate-x-1/2 hidden lg:block w-50 h-50 bg-[#f400ff] rounded-full blur-[150px] opacity-50 z-30"></div>
+      <div className="flex flex-col gap-6 w-full lg:w-7/12 z-40">
+        <div className="border border-[#b241b7] bg-[#b141b724] rounded-full px-4 py-2 flex items-center font-semibold w-full lg:w-7/12 justify-between text-xs lg:text-sm">
+          <p className="text-[#b241b7]">
+            GOGeneBio — Your Bioinformatics Launchpad
+          </p>
+          <TbCircleArrowDownFilled className="text-[#b241b7] text-lg animate-bounce" />
         </div>
-        <p className="font-bold text-[28px] md:text-[36px] lg:text-[48px] mt-5">
-          Learn Bioinformatics & Genomics From Scratch — No Experience Needed
-        </p>
-        <p className="text-[12px] md:text-[14px] lg:text-[16px] w-full md:w-[70%] lg:w-[50%] mt-4">
-          Are you curious about genomics & bioinformatics but don't know where
-          to start? GOGeneBio is designed just for people like you. No prior
-          experience needed. You'll gain real skills, not just theory.
-        </p>
-        <div className="flex w-full md:w-[70%] lg:w-[50%] mt-7 mx-auto md:mx-0 gap-4 md:gap-5 justify-center md:justify-start">
-          <button className="bg-[#9D3CA7] text-white px-4 py-2 md:px-6 md:py-3 rounded-4xl cursor-pointer">
-            Contact Us
+        <div className="dark:text-white">
+          <h1 className="font-bold text-3xl lg:text-5xl leading-tight">
+            Learn{" "}
+            <span className="text-[#7ed003]">Bioinformatics & Genomics</span>{" "}
+            From Scratch — No Experience Needed
+          </h1>
+          <p className="text-xs dark:text-white lg:text-base text-[#4f4f4f] mt-4 leading-loose">
+            Are you curious about genomics & bioinformatics but don't know where
+            to start? GOGeneBio is designed just for people like you. No prior
+            experience needed. You'll gain real skills, not just theory.
+          </p>
+        </div>
+        <Link to="/form">
+          <button className=" w-full lg:w-1/4 text-white py-2 px-3 font-medium bg-linear-to-r from-[#b241b7] to-[#3d168b] rounded-full hover:bg-gradient-to-l hover:from-[#3d168b] hover:to-[#b241b7] cursor-pointer hover:translate-x-2 transition duration-300 text-sm mt-2">
+            Register Now &rarr;
           </button>
-
-          <Link to={"/form"}>
-            <button className="border border-[#9D3CA7] text-white px-4 py-2 md:px-6 md:py-3 rounded-4xl cursor-pointer">
-              Register Now
-            </button>
-          </Link>
-        </div>
+        </Link>
       </div>
-      
+      <div className="absolute hidden lg:flex z-40 right-20 top-20 justify-end transition-all  duration-300">
+        {darkMode ? (
+          <img src={hero_black} className="w-9/12" alt="" />
+        ) : (
+          <img src={collage} className="w-9/12" alt="" />
+        )}
+      </div>
+      {/* Rectangles */}
+      <div className="hidden lg:block">
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_8] absolute left-20 top-2"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute bottom-4 left-10"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute bottom-20 left-30 "></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute bottom-20 left-80"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute top-40 right-150"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute top-60 right-150"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-80 right-150"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute top-20 left-130"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute top-20 right-130"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute top-80 left-100"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute top-60 left-80"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute top-40 left-40"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute bottom-38 left-50"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute bottom-10 left-140"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-50 right-100"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-32 right-75"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute bottom-10 right-65"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute top-45 right-12"></div>
+        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-72 right-24"></div>
+        <div className="w-16 h-16 z-10 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute top-0 right-90"></div>
+      </div>
 
-      <div className="w-full md:w-[30%] lg:w-auto mt-10 md:mt-0 ml-0 md:ml-[100px]">
-        <img
-          className="w-full md:w-auto z-0"
-          src={collage}
-          alt="Genomics Collage"
-        />
+      {/* dots */}
+      <div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-10 top-10"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-30 top-5"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute left-10 top-15"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-80 top-20"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-76 top-16"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute left-76 top-5"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute left-50 top-30"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute left-90 bottom-16"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute left-30 top-60"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-15 top-40"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-20 top-70"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-120 top-30"></div>
+        <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-140 top-70"></div>
       </div>
     </div>
   );
