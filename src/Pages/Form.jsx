@@ -11,28 +11,127 @@ const Form = () => {
     experience: "",
   });
 
-  // const [selectedCountry, setSelectedCountry] = useState("");
-
+  const regions = [
+    {
+      name: "Tunis (Tunisia)",
+      link: "https://chat.whatsapp.com/Ef7AXBo1wxlLQNSthWZ3dh",
+    },
+    {
+      name: "Ibadan (Nigeria)",
+      link: "https://chat.whatsapp.com/Jw7SDFw0bnN7qgC4jzhFBl",
+    },
+    {
+      name: "Lagos (Nigeria)",
+      link: "https://chat.whatsapp.com/H6GOrIL4hY8DdWgRsrosBT",
+    },
+    {
+      name: "Ogun (Nigeria)",
+      link: "https://chat.whatsapp.com/J0JOxIMtgamGFwDIFoZ7Nw",
+    },
+    {
+      name: "Rawalpindi (Pakistan)",
+      link: "https://chat.whatsapp.com/LJJprHXAVXnE53VjgXtK0w",
+    },
+    {
+      name: "Ekiti state (Nigeria)",
+      link: "https://chat.whatsapp.com/Cglpzmmh6pbBTIryN4Ux6L",
+    },
+    {
+      name: "Ekpoma (Nigeria)",
+      link: "https://chat.whatsapp.com/FkFyhmLMpNo3UUeL666kM9",
+    },
+    {
+      name: "Oyo/Ogbomosho (Nigeria)",
+      link: "https://chat.whatsapp.com/F25rCb10oRJ0CNBsyDwxOh",
+    },
+    {
+      name: "Ekpoma/ Edo State (Nigeria)",
+      link: "https://chat.whatsapp.com/KEeoMIl1XMgDQaBBjdGV4U",
+    },
+    {
+      name: "Abuja, FCT (Nigeria)",
+      link: "https://chat.whatsapp.com/IpzdTLTVCqYBR0DgmuPDAM",
+    },
+    {
+      name: "Jos (Nigeria)",
+      link: "https://chat.whatsapp.com/HaVKsQ4pDslE3lgmG95haN",
+    },
+    {
+      name: "Dutse Jigawa state (Nigeria)",
+      link: "https://chat.whatsapp.com/Et24mvLQyDGJRDg4dDFOhY",
+    },
+    {
+      name: "Los Baños (Philippines)",
+      link: "https://chat.whatsapp.com/F64M5z1jE7VKCqRoBcCSv0",
+    },
+    {
+      name: "OgunState, Abeokuta (Nigeria)",
+      link: "https://chat.whatsapp.com/BI8Zq2sTLoJGLOISIJzPJv",
+    },
+    {
+      name: "Calabar (Nigeria)",
+      link: "https://chat.whatsapp.com/HQVXqHxPRbsDvadFON3C6O",
+    },
+    {
+      name: "Abuja (Nigeria)",
+      link: "https://chat.whatsapp.com/Gz7H9PstDKdLcYxN3yw4Zu",
+    },
+    {
+      name: "Osogbo (Nigeria)",
+      link: "https://chat.whatsapp.com/G4pvLWMxnXuDxZxOlljFrj",
+    },
+    {
+      name: "Jos, Plateau state (Nigeria)",
+      link: "https://chat.whatsapp.com/Jkaz6VufPa2DtjFxrl509G",
+    },
+    {
+      name: "Nairobi/Makueni (Kenya)",
+      link: "https://chat.whatsapp.com/GzAmbYyem4a4eobOz603a6",
+    },
+    {
+      name: "SOKOTO (Nigeria)",
+      link: "https://chat.whatsapp.com/G11txorkFUb1e9MQheryKx",
+    },
+    {
+      name: "FCT Abuja (Nigeria)",
+      link: "https://chat.whatsapp.com/Gafk8D32GrE0P6gEktE0mV",
+    },
+    {
+      name: "Port Harcourt (Nigeria)",
+      link: "https://chat.whatsapp.com/KE7KDrnhIQlGgPIiK9xG84",
+    },
+    {
+      name: "Enugu (Nigeria)",
+      link: "https://chat.whatsapp.com/HrrYYIEaHRS0EFbf2yIWyK",
+    },
+    {
+      name: "Edo State (Ekpoma/Irrua) (Nigeria)",
+      link: "https://chat.whatsapp.com/KEeoMIl1XMgDQaBBjdGV4U",
+    },
+    {
+      name: "Ndola (Zambia)",
+      link: "https://chat.whatsapp.com/EwoUnczJdHE0zM6vC2406s",
+    },
+    {
+      name: "Ibadan (Nigeria) - Group 2",
+      link: "https://chat.whatsapp.com/CaKIwXXzKgiAMY7H6F9kbk",
+    },
+  ];
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
-  
   const handleChange = (e) => {
-    // setSelectedCountry(e.target.value);
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  
   const handleSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
     setMessage("");
 
-    const { error } = await supabase
-      .from("registrations")
-      .insert([formData]);
+    const { error } = await supabase.from("registrations").insert([formData]);
 
     if (error) {
       setMessage("Something went wrong: " + error.message);
@@ -40,24 +139,20 @@ const Form = () => {
       return;
     }
 
-    const countryLinks = {
-      nigeria: "https://nkiri.com/",
-      ghana: "https://web.whatsapp.com/",
-      kenya: "https://music.youtube.com/watch?v=hHYlu8G3Jhc&list=RDAMVMuiK5NT9yQBQ",
-      "south-africa": "https://wa.me/27XXXXXXXXXX",
-    };
+   
+    const selectedRegion = regions.find((r) => r.name === formData.region);
 
-    if (countryLinks[formData.region]) {
-      window.location.href = countryLinks[formData.region];
+    if (selectedRegion) {
+      window.location.href = selectedRegion.link;
     } else {
-      setMessage("✅ Saved, but region link not found!");
+      setMessage("Saved, but region link not found.");
     }
 
     setLoading(false);
   };
 
   return (
-    <div className="py-10 px-5 md:px-24 dark:bg-[#040404] dark:text-white transition duration-400">
+    <div className="py-10 px-5 md:px-24">
       <h2 className="font-semibold text-2xl md:text-4xl text-center mb-10">
         Application Form
       </h2>
@@ -112,16 +207,17 @@ const Form = () => {
               <label className="font-medium">Region</label>
               <select
                 name="region"
-                className="border border-[#DFDFDFDF] p-2.5 rounded-lg focus:outline-none dark:bg-[#040404] dark:text-white"
+                className="border border-[#DFDFDFDF] p-2.5 rounded-lg focus:outline-none"
                 value={formData.region}
                 onChange={handleChange}
                 required
               >
-                <option value="">Select your country of residence</option>
-                <option value="nigeria">Nigeria</option>
-                <option value="ghana">Ghana</option>
-                <option value="kenya">Kenya</option>
-                <option value="south-africa">South Africa</option>
+                <option value="">Choose your region</option>
+                {regions.map((region, index) => (
+                  <option key={index} value={region.name}>
+                    {region.name}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
@@ -136,7 +232,7 @@ const Form = () => {
                 name="heard_before"
                 value={formData.heard_before}
                 onChange={handleChange}
-                className="border border-[#DFDFDFDF] p-2 rounded-lg dark:bg-[#040404] dark:text-white"
+                className="border border-[#DFDFDFDF] p-2 rounded-lg"
                 required
               >
                 <option value="">Choose</option>
@@ -147,12 +243,14 @@ const Form = () => {
 
             {/* Experience */}
             <div className="flex flex-col gap-2">
-              <label className="font-medium">How would you rate your experience?</label>
+              <label className="font-medium">
+                How would you rate your experience?
+              </label>
               <select
                 name="experience"
                 value={formData.experience}
                 onChange={handleChange}
-                className="border border-[#DFDFDFDF] p-2 rounded-lg dark:bg-[#040404] dark:text-white"
+                className="border border-[#DFDFDFDF] p-2 rounded-lg"
                 required
               >
                 <option value="">Choose</option>
@@ -179,4 +277,3 @@ const Form = () => {
 };
 
 export default Form;
-// Note: Remember to replace the placeholder Supabase URL and Key with your actual project details in supabaseClient.js

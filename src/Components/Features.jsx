@@ -28,7 +28,7 @@ const Features = () => {
       </div>
 
       <Link to="/form">
-        <button className=" w-full  text-white py-2 px-3 font-medium bg-linear-to-r from-[#b241b7] to-[#3d168b] rounded-full hover:bg-gradient-to-l hover:from-[#3d168b] hover:to-[#b241b7] cursor-pointer hover:translate-x-2 transition duration-300 text-sm mt-10 animate-bounce">
+        <button className=" w-full text-white py-2 px-3 font-medium bg-linear-to-r from-[#b241b7] to-[#3d168b] rounded-full text-sm mt-10 animate-bounce">
           Register Now &rarr;
         </button>
       </Link>
