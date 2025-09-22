@@ -7,6 +7,7 @@ const Features = () => {
     <div className="w-full p-15 bg-[#b241b7]/5 lg:bg-white flex justify-center items-center flex-col relative">
       <div className="hidden lg:block">
         <div className="absolute bg-[#3d168b]/5 -left-0 top-0 w-100 h-120 blur-lg rounded-full z-30"></div>
+        <div className="absolute bg-[#66ff00]/2 left-70 top-0 w-150 h-150 blur-lg rounded-full z-30"></div>
         <div className="absolute bg-[#b241b7]/5 -right-0 top-0 w-100 h-120 blur-lg rounded-full z-30"></div>
       </div>
       <div className="bg-[#b241b7]/10 py-2 px-4 rounded-3xl">
@@ -18,7 +19,7 @@ const Features = () => {
         {keyFeatures.map((feature, index) => (
           <div
             key={index}
-            className="border border-[#DFDFDFDF] transition duration-300 hover:shadow-md rounded-xl px-4 py-6 bg-white flex flex-col gap-4"
+            className="border border-[#DFDFDFDF] hover:shadow-md rounded-xl px-4 py-6 bg-white flex flex-col gap-4"
           >
             <h1 className="text-base font-semibold">{feature.feature}</h1>
             <p className="text-sm">{feature.description}</p>

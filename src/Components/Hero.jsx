@@ -1,29 +1,26 @@
-import React from "react";
 import collage from "../assets/hero_img.png";
-import hero_black from "../assets/hero_black.png";
 import { TbCircleArrowDownFilled } from "react-icons/tb";
-// import hero_img from "../assets/outreach.png";
 import { Link } from "react-router-dom";
 
-const Hero = ({ darkMode }) => {
+const Hero = () => {
   return (
-    <div className="bg-[#F7F7F7] dark:bg-[#000] flex justify-center lg:justify-between min-h-1 lg:min-h-screen py-10 px-8 lg:px-16 relative">
-      <div className="absolute -top-20 left-50 -translate-x-1/2 w-30 h-30 lg:w-60 lg:h-60 bg-[#f400ff] rounded-full blur-[100px] opacity-50 z-30"></div>
-      <div className="absolute top-50 right-2 -translate-x-1/2 hidden lg:block w-50 h-50 bg-[#f400ff] rounded-full blur-[150px] opacity-50 z-30"></div>
+    <div className="bg-[#F7F7F7] flex justify-center lg:justify-between min-h-1 lg:min-h-screen py-10 px-8 lg:px-16 relative">
+      <div className="hidden lg:block absolute top-20 left-30 -translate-x-1/2 w-30 h-30 lg:w-100 lg:h-100 bg-[#3d168b]/30 rounded-full blur-[100px] opacity-50 z-30"></div>
+      <div className="hidden lg:block absolute top-50 right-2 -translate-x-1/2 w-50 h-50 bg-[#f400ff] rounded-full blur-[150px] opacity-50 z-30"></div>
       <div className="flex flex-col gap-6 w-full lg:w-7/12 z-40">
-        <div className="border border-[#b241b7] bg-[#b141b724] rounded-full px-4 py-2 flex items-center font-semibold w-full lg:w-7/12 justify-between text-xs lg:text-sm">
+        <div className="border border-[#b241b7] bg-[#b141b724] rounded-full px-4 py-2 flex items-center font-semibold w-full lg:w-7/12 justify-between text-[10px] lg:text-sm">
           <p className="text-[#b241b7]">
             GOGeneBio — Your Bioinformatics Launchpad
           </p>
           <TbCircleArrowDownFilled className="text-[#b241b7] text-lg animate-bounce" />
         </div>
-        <div className="dark:text-white">
+        <div>
           <h1 className="font-bold text-3xl lg:text-5xl leading-tight">
             Learn{" "}
             <span className="text-[#7ed003]">Bioinformatics & Genomics</span>{" "}
             From Scratch — No Experience Needed
           </h1>
-          <p className="text-xs dark:text-white lg:text-base text-[#4f4f4f] mt-4 leading-loose">
+          <p className="text-xs lg:text-base text-[#4f4f4f] mt-4 leading-loose">
             Are you curious about genomics & bioinformatics but don't know where
             to start? GOGeneBio is designed just for people like you. No prior
             experience needed. You'll gain real skills, not just theory.
@@ -35,39 +32,36 @@ const Hero = ({ darkMode }) => {
           </button>
         </Link>
       </div>
-      <div className="absolute hidden lg:flex z-40 right-20 top-20 justify-end transition-all  duration-300">
-        {darkMode ? (
-          <img src={hero_black} className="w-9/12" alt="" />
-        ) : (
-          <img src={collage} className="w-9/12" alt="" />
-        )}
+      <div className="absolute hidden lg:flex z-40 right-20 top-20 justify-end">
+        <img src={collage} className="w-9/12" alt="" />
       </div>
+
       {/* Rectangles */}
       <div className="hidden lg:block">
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_8] absolute left-20 top-2"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute bottom-4 left-10"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute bottom-20 left-30 "></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute bottom-20 left-80"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute top-40 right-150"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute top-60 right-150"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-80 right-150"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute top-20 left-130"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute top-20 right-130"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute top-80 left-100"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute top-60 left-80"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute top-40 left-40"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute bottom-38 left-50"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute bottom-10 left-140"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-50 right-100"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-32 right-75"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute bottom-10 right-65"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute top-45 right-12"></div>
-        <div className="w-16 h-16 z-20 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-72 right-24"></div>
-        <div className="w-16 h-16 z-10 dark:bg-[#070708] border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute top-0 right-90"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_8] absolute left-20 top-2"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute bottom-4 left-10"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute bottom-20 left-30 "></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute bottom-20 left-80"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute top-40 right-150"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute top-60 right-150"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-80 right-150"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute top-20 left-130"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute top-20 right-130"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute top-80 left-100"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute top-60 left-80"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute top-40 left-40"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_right,#f200ff85,#f200ff00)_1] absolute bottom-38 left-50"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute bottom-10 left-140"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-50 right-100"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-32 right-75"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute bottom-10 right-65"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_left,#f200ff85,#f200ff00)_1] absolute top-45 right-12"></div>
+        <div className="w-16 h-16 z-20 border-1 blur-[1px] [border-image:linear-gradient(to_bottom,#f200ff85,#f200ff00)_1] absolute top-72 right-24"></div>
+        <div className="w-16 h-16 z-10 border-1 blur-[1px] [border-image:linear-gradient(to_top,#f200ff85,#f200ff00)_1] absolute top-0 right-90"></div>
       </div>
 
       {/* dots */}
-      <div>
+      <div className="hidden lg:block">
         <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-10 top-10"></div>
         <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute right-30 top-5"></div>
         <div className="bg-white w-0.5 h-0.5 rounded-full blur-[1px] absolute left-10 top-15"></div>
