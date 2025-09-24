@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="hidden lg:block absolute top-20 left-30 -translate-x-1/2 w-30 h-30 lg:w-100 lg:h-100 bg-[#3d168b]/30 rounded-full blur-[100px] opacity-50 z-30"></div>
       <div className="hidden lg:block absolute top-50 right-2 -translate-x-1/2 w-50 h-50 bg-[#f400ff] rounded-full blur-[150px] opacity-50 z-30"></div>
       <div className="flex flex-col gap-6 w-full lg:w-7/12 z-40">
-        <div className="border border-[#b241b7] bg-[#b141b724] rounded-full px-4 py-2 flex items-center font-semibold w-full lg:w-7/12 justify-between text-[10px] lg:text-sm">
+        <div className="border border-[#b241b7] bg-[#b141b724] rounded-full px-4 py-2 flex items-center font-semibold w-full lg:w-7/12 justify-between text-[10px] md:text-sm">
           <p className="text-[#b241b7]">
             GOGeneBio — Your Bioinformatics Launchpad
           </p>
