@@ -18,7 +18,7 @@ const ProgramBenefits = () => {
   return (
     <div className="p-5 md:p-10 lg:p-15 bg-[#F3F4F6] flex flex-col items-center">
       <div className="text-center mb-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-[#3d168b]">
+        <h2 className="text-2xl md:text-3xl font-bold">
           What You'll Get
         </h2>
         <p className="text-sm md:text-base text-gray-600 mt-2">
