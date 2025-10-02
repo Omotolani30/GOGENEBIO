@@ -5,16 +5,11 @@ import { keyFeatures } from "../../keyFeatures";
 const Features = () => {
   return (
     <div className="w-full p-15 bg-[#b241b7]/5 lg:bg-white flex justify-center items-center flex-col relative">
-      {/* <div className="hidden lg:block">
-        <div className="absolute bg-[#3d168b]/5 -left-0 top-0 w-100 h-120 blur-lg rounded-full z-30"></div>
-        <div className="absolute bg-[#66ff00]/2 left-70 top-0 w-150 h-150 blur-lg rounded-full z-30"></div>
-        <div className="absolute bg-[#b241b7]/5 -right-0 top-0 w-100 h-120 blur-lg rounded-full z-30"></div>
-      </div> */}
       <div className="bg-[#b241b7]/10 py-2 px-4 rounded-3xl">
         <p className="font-semibold text-sm text-[#b241b7]">Our Key Features</p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 w-[100vw] px-8 lg:w-full lg:px-5 mt-10 z-50">
+      <div className="grid grid-cols-1 md:grid-cols-2 w-full lg:grid-cols-3 gap-10 lg:px-5 mt-10 z-50">
         {/* {features} */}
         {keyFeatures.map((feature, index) => (
           <div

@@ -30,11 +30,8 @@ const ProgramBenefits = () => {
         {benefits.map((benefit, index) => (
           <div
             key={index}
-            className="flex items-start gap-4 bg-[#FFFFFF] p-5 rounded shadow-md border-l-6 border-[#3d168b]"
+            className="bg-[#FFFFFF] p-5 rounded shadow-md border-l-6 border-[#3d168b]"
           >
-            {/* <div>
-              <IoMdCheckboxOutline className="text-[#3d168b] text-xl" />
-            </div> */}
             <p className="text-sm md:text-base text-gray-700">
               {benefit}
             </p>
