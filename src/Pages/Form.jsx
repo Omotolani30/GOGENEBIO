@@ -33,7 +33,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/LJJprHXAVXnE53VjgXtK0w",
     },
     {
-      name: "Ekiti state (Nigeria)",
+      name: "Ekiti (Nigeria)",
       link: "https://chat.whatsapp.com/Cglpzmmh6pbBTIryN4Ux6L",
     },
     {
@@ -41,15 +41,11 @@ const Form = () => {
       link: "https://chat.whatsapp.com/FkFyhmLMpNo3UUeL666kM9",
     },
     {
-      name: "Oyo/Ogbomosho (Nigeria)",
+      name: "Ogbomosho (Nigeria)",
       link: "https://chat.whatsapp.com/F25rCb10oRJ0CNBsyDwxOh",
     },
     {
-      name: "Ekpoma/ Edo State (Nigeria)",
-      link: "https://chat.whatsapp.com/KEeoMIl1XMgDQaBBjdGV4U",
-    },
-    {
-      name: "Abuja, FCT (Nigeria)",
+      name: "Abuja (Nigeria)",
       link: "https://chat.whatsapp.com/IpzdTLTVCqYBR0DgmuPDAM",
     },
     {
@@ -57,7 +53,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/HaVKsQ4pDslE3lgmG95haN",
     },
     {
-      name: "Dutse Jigawa state (Nigeria)",
+      name: "Dutse (Nigeria)",
       link: "https://chat.whatsapp.com/Et24mvLQyDGJRDg4dDFOhY",
     },
     {
@@ -65,7 +61,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/F64M5z1jE7VKCqRoBcCSv0",
     },
     {
-      name: "OgunState, Abeokuta (Nigeria)",
+      name: "Abeokuta (Nigeria)",
       link: "https://chat.whatsapp.com/BI8Zq2sTLoJGLOISIJzPJv",
     },
     {
@@ -73,27 +69,15 @@ const Form = () => {
       link: "https://chat.whatsapp.com/HQVXqHxPRbsDvadFON3C6O",
     },
     {
-      name: "Abuja (Nigeria)",
-      link: "https://chat.whatsapp.com/Gz7H9PstDKdLcYxN3yw4Zu",
-    },
-    {
       name: "Osogbo (Nigeria)",
       link: "https://chat.whatsapp.com/G4pvLWMxnXuDxZxOlljFrj",
     },
     {
-      name: "Jos, Plateau state (Nigeria)",
-      link: "https://chat.whatsapp.com/Jkaz6VufPa2DtjFxrl509G",
-    },
-    {
-      name: "Nairobi/Makueni (Kenya)",
-      link: "https://chat.whatsapp.com/GzAmbYyem4a4eobOz603a6",
-    },
-    {
-      name: "SOKOTO (Nigeria)",
+      name: "Sokoto (Nigeria)",
       link: "https://chat.whatsapp.com/G11txorkFUb1e9MQheryKx",
     },
     {
-      name: "FCT Abuja (Nigeria)",
+      name: "Bwari (Nigeria)",
       link: "https://chat.whatsapp.com/Gafk8D32GrE0P6gEktE0mV",
     },
     {
@@ -105,16 +89,36 @@ const Form = () => {
       link: "https://chat.whatsapp.com/HrrYYIEaHRS0EFbf2yIWyK",
     },
     {
-      name: "Edo State (Ekpoma/Irrua) (Nigeria)",
-      link: "https://chat.whatsapp.com/KEeoMIl1XMgDQaBBjdGV4U",
+      name: "Nairobi (Kenya)",
+      link: "https://chat.whatsapp.com/GzAmbYyem4a4eobOz603a6",
     },
     {
       name: "Ndola (Zambia)",
       link: "https://chat.whatsapp.com/EwoUnczJdHE0zM6vC2406s",
     },
     {
-      name: "Ibadan (Nigeria) - Group 2",
-      link: "https://chat.whatsapp.com/CaKIwXXzKgiAMY7H6F9kbk",
+      name: "Bode-Saadu (Nigeria)",
+      link: "https://chat.whatsapp.com/HrrYYIEaHRS0EFbf2yIWyK",
+    },
+    {
+      name: "Ado (Nigeria)",
+      link: "https://chat.whatsapp.com/KmU8oIPkjWXD7fyxhmjkFZ",
+    },
+    {
+      name: "Surulere (Nigeria)",
+      link: "https://chat.whatsapp.com/JbtE8Ct3pVgG3eGnGMCjfx",
+    },
+    {
+      name: "Ijagun (Nigeria)",
+      link: "https://chat.whatsapp.com/KfE1IOz4svD4xR4hMxEDEI",
+    },
+    {
+      name: "Delta (Nigeria)",
+      link: "https://chat.whatsapp.com/GzJI9GS6pgA1d0nehhwAMU",
+    },
+    {
+      name: "Wukari (Nigeria)",
+      link: "https://chat.whatsapp.com/Ic8SSFyxdIsGLkjqxaz1P8",
     },
   ];
 
@@ -139,7 +143,6 @@ const Form = () => {
       return;
     }
 
-   
     const selectedRegion = regions.find((r) => r.name === formData.region);
 
     if (selectedRegion) {
