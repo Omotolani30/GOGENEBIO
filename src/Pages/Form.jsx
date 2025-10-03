@@ -42,7 +42,7 @@ const Form = () => {
     },
     {
       name: "Ogbomosho (Nigeria)",
-      link: "https://chat.whatsapp.com/F25rCb10oRJ0CNBsyDwxOh",
+      link: "https://chat.whatsapp.com/CkLORp3hpY9GpTZqbF8wKF",
     },
     {
       name: "Abuja (Nigeria)",
