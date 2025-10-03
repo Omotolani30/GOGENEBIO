@@ -12,131 +12,131 @@ const Form = () => {
   });
 
   const regions = [
-    {
-      name: "Tunis",
-      link: "https://chat.whatsapp.com/Ef7AXBo1wxlLQNSthWZ3dh",
-    },
-    {
-      name: "Ibadan (Oyeniyi Blessing)",
-      link: "https://chat.whatsapp.com/Jw7SDFw0bnN7qgC4jzhFBl",
-    },
-    {
-      name: "Ibadan (Abdullahi Babatunde)",
-      link: "https://chat.whatsapp.com/CaKIwXXzKgiAMY7H6F9kbk",
-    },
-    {
-      name: "Lagos (Ashimolowo Agape)",
-      link: "https://chat.whatsapp.com/H6GOrIL4hY8DdWgRsrosBT",
-    },
-    {
-      name: "Lagos (John Chidozie)",
-      link: "https://chat.whatsapp.com/JbtE8Ct3pVgG3eGnGMCjfx",
-    },
-    {
-      name: "Ogun (Lugard Damilola)",
-      link: "https://chat.whatsapp.com/J0JOxIMtgamGFwDIFoZ7Nw",
-    },
-    {
-      name: "Ogun (Faniyi Olakunle)",
-      link: "https://chat.whatsapp.com/BI8Zq2sTLoJGLOISIJzPJv",
-    },
-    {
-      name: "Rawalpindi (Pakistan)",
-      link: "https://chat.whatsapp.com/LJJprHXAVXnE53VjgXtK0w",
-    },
-    {
-      name: "Ekiti",
-      link: "https://chat.whatsapp.com/Cglpzmmh6pbBTIryN4Ux6L",
-    },
-    {
-      name: "Ekpoma",
-      link: "https://chat.whatsapp.com/FkFyhmLMpNo3UUeL666kM9",
-    },
-    {
-      name: "Ogbomosho (Emmanuel Oyelayo)",
-      link: "https://chat.whatsapp.com/CkLORp3hpY9GpTZqbF8wKF",
-    },
-    {
-      name: "Ogbomosho (Afolabi Sofiat)",
-      link: "https://chat.whatsapp.com/F25rCb10oRJ0CNBsyDwxOh",
-    },
-    {
-      name: "Abuja (Kolawole Nathaniel)",
-      link: "https://chat.whatsapp.com/IpzdTLTVCqYBR0DgmuPDAM",
-    },
-    {
-      name: "Abuja (Emmauel Ogechi)",
-      link: "https://chat.whatsapp.com/Gz7H9PstDKdLcYxN3yw4Zu",
-    },
-    {
-      name: "Abuja (Okwuchi Flora)",
-      link: "https://chat.whatsapp.com/Gafk8D32GrE0P6gEktE0mV",
-    },
-    {
-      name: "Jos (Akanni Sherifdeen)",
-      link: "https://chat.whatsapp.com/Jkaz6VufPa2DtjFxrl509G",
-    },
-    {
-      name: "Jos (Fancy Ishaku)",
-      link: "https://chat.whatsapp.com/HaVKsQ4pDslE3lgmG95haN",
-    },
-    {
-      name: "Dutse",
-      link: "https://chat.whatsapp.com/Et24mvLQyDGJRDg4dDFOhY",
-    },
-    {
-      name: "Los Baños",
-      link: "https://chat.whatsapp.com/F64M5z1jE7VKCqRoBcCSv0",
-    },
-    {
-      name: "Calabar",
-      link: "https://chat.whatsapp.com/HQVXqHxPRbsDvadFON3C6O",
-    },
-    {
-      name: "Osogbo",
-      link: "https://chat.whatsapp.com/G4pvLWMxnXuDxZxOlljFrj",
-    },
-    {
-      name: "Sokoto",
-      link: "https://chat.whatsapp.com/G11txorkFUb1e9MQheryKx",
-    },
-    {
-      name: "Port Harcourt",
-      link: "https://chat.whatsapp.com/KE7KDrnhIQlGgPIiK9xG84",
-    },
-    {
-      name: "Enugu",
-      link: "https://chat.whatsapp.com/HrrYYIEaHRS0EFbf2yIWyK",
-    },
-    {
-      name: "Nairobi",
-      link: "https://chat.whatsapp.com/GzAmbYyem4a4eobOz603a6",
-    },
-    {
-      name: "Ndola",
-      link: "https://chat.whatsapp.com/EwoUnczJdHE0zM6vC2406s",
-    },
-    {
-      name: "Bode-Saadu (Kwara)",
-      link: "https://chat.whatsapp.com/HrrYYIEaHRS0EFbf2yIWyK",
-    },
-    {
-      name: "Ado-Ekiti",
-      link: "https://chat.whatsapp.com/KmU8oIPkjWXD7fyxhmjkFZ",
-    },
-    {
-      name: "TASUED",
-      link: "https://chat.whatsapp.com/KfE1IOz4svD4xR4hMxEDEI",
-    },
-    {
-      name: "Delta",
-      link: "https://chat.whatsapp.com/GzJI9GS6pgA1d0nehhwAMU",
-    },
-    {
-      name: "Taraba",
-      link: "https://chat.whatsapp.com/Ic8SSFyxdIsGLkjqxaz1P8",
-    },
-  ];
+  {
+    name: "Abuja (Emmauel Ogechi)",
+    link: "https://chat.whatsapp.com/Gz7H9PstDKdLcYxN3yw4Zu",
+  },
+  {
+    name: "Abuja (Kolawole Nathaniel)",
+    link: "https://chat.whatsapp.com/IpzdTLTVCqYBR0DgmuPDAM",
+  },
+  {
+    name: "Abuja (Okwuchi Flora)",
+    link: "https://chat.whatsapp.com/Gafk8D32GrE0P6gEktE0mV",
+  },
+  {
+    name: "Ado-Ekiti",
+    link: "https://chat.whatsapp.com/KmU8oIPkjWXD7fyxhmjkFZ",
+  },
+  {
+    name: "Bode-Saadu (Kwara)",
+    link: "https://chat.whatsapp.com/HrrYYIEaHRS0EFbf2yIWyK",
+  },
+  {
+    name: "Calabar",
+    link: "https://chat.whatsapp.com/HQVXqHxPRbsDvadFON3C6O",
+  },
+  {
+    name: "Delta",
+    link: "https://chat.whatsapp.com/GzJI9GS6pgA1d0nehhwAMU",
+  },
+  {
+    name: "Dutse",
+    link: "https://chat.whatsapp.com/Et24mvLQyDGJRDg4dDFOhY",
+  },
+  {
+    name: "Ekiti",
+    link: "https://chat.whatsapp.com/Cglpzmmh6pbBTIryN4Ux6L",
+  },
+  {
+    name: "Ekpoma",
+    link: "https://chat.whatsapp.com/FkFyhmLMpNo3UUeL666kM9",
+  },
+  {
+    name: "Enugu",
+    link: "https://chat.whatsapp.com/HrrYYIEaHRS0EFbf2yIWyK",
+  },
+  {
+    name: "Ibadan (Abdullahi Babatunde)",
+    link: "https://chat.whatsapp.com/CaKIwXXzKgiAMY7H6F9kbk",
+  },
+  {
+    name: "Ibadan (Oyeniyi Blessing)",
+    link: "https://chat.whatsapp.com/Jw7SDFw0bnN7qgC4jzhFBl",
+  },
+  {
+    name: "Jos (Akanni Sherifdeen)",
+    link: "https://chat.whatsapp.com/Jkaz6VufPa2DtjFxrl509G",
+  },
+  {
+    name: "Jos (Fancy Ishaku)",
+    link: "https://chat.whatsapp.com/HaVKsQ4pDslE3lgmG95haN",
+  },
+  {
+    name: "Lagos (Ashimolowo Agape)",
+    link: "https://chat.whatsapp.com/H6GOrIL4hY8DdWgRsrosBT",
+  },
+  {
+    name: "Lagos (John Chidozie)",
+    link: "https://chat.whatsapp.com/JbtE8Ct3pVgG3eGnGMCjfx",
+  },
+  {
+    name: "Los Baños",
+    link: "https://chat.whatsapp.com/F64M5z1jE7VKCqRoBcCSv0",
+  },
+  {
+    name: "Nairobi",
+    link: "https://chat.whatsapp.com/GzAmbYyem4a4eobOz603a6",
+  },
+  {
+    name: "Ndola",
+    link: "https://chat.whatsapp.com/EwoUnczJdHE0zM6vC2406s",
+  },
+  {
+    name: "Ogbomosho (Afolabi Sofiat)",
+    link: "https://chat.whatsapp.com/F25rCb10oRJ0CNBsyDwxOh",
+  },
+  {
+    name: "Ogbomosho (Emmanuel Oyelayo)",
+    link: "https://chat.whatsapp.com/CkLORp3hpY9GpTZqbF8wKF",
+  },
+  {
+    name: "Ogun (Faniyi Olakunle)",
+    link: "https://chat.whatsapp.com/BI8Zq2sTLoJGLOISIJzPJv",
+  },
+  {
+    name: "Ogun (Lugard Damilola)",
+    link: "https://chat.whatsapp.com/J0JOxIMtgamGFwDIFoZ7Nw",
+  },
+  {
+    name: "Osogbo",
+    link: "https://chat.whatsapp.com/G4pvLWMxnXuDxZxOlljFrj",
+  },
+  {
+    name: "Port Harcourt",
+    link: "https://chat.whatsapp.com/KE7KDrnhIQlGgPIiK9xG84",
+  },
+  {
+    name: "Rawalpindi (Pakistan)",
+    link: "https://chat.whatsapp.com/LJJprHXAVXnE53VjgXtK0w",
+  },
+  {
+    name: "Sokoto",
+    link: "https://chat.whatsapp.com/G11txorkFUb1e9MQheryKx",
+  },
+  {
+    name: "TASUED",
+    link: "https://chat.whatsapp.com/KfE1IOz4svD4xR4hMxEDEI",
+  },
+  {
+    name: "Taraba",
+    link: "https://chat.whatsapp.com/Ic8SSFyxdIsGLkjqxaz1P8",
+  },
+  {
+    name: "Tunis",
+    link: "https://chat.whatsapp.com/Ef7AXBo1wxlLQNSthWZ3dh",
+  },
+];
 
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
