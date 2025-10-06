@@ -97,7 +97,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/F25rCb10oRJ0CNBsyDwxOh",
     },
     {
-      name: "Ogbomosho (Emmanuel Oyelayo)",
+      name: "Ogbomosho (AMR Club LAUTECH)",
       link: "https://chat.whatsapp.com/CkLORp3hpY9GpTZqbF8wKF",
     },
     {
@@ -121,7 +121,11 @@ const Form = () => {
       link: "https://chat.whatsapp.com/LJJprHXAVXnE53VjgXtK0w",
     },
     {
-      name: "Sokoto",
+      name: "Sokoto (Abdulbaki Alfa-Ibrahim)",
+      link: "https://chat.whatsapp.com/GAss9ow8IHg43MooW4aXwA",
+    },
+    {
+      name: "Sokoto - UDUS (Ahmad AbdulKadir)",
       link: "https://chat.whatsapp.com/G11txorkFUb1e9MQheryKx",
     },
     {
