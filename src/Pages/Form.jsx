@@ -13,7 +13,7 @@ const Form = () => {
 
   const regions = [
     {
-      name: "Abuja (Emmauel Ogechi)",
+      name: "Abuja - GWAGWALADA (Emmauel Ogechi)",
       link: "https://chat.whatsapp.com/Gz7H9PstDKdLcYxN3yw4Zu",
     },
     {
@@ -33,7 +33,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/HrrYYIEaHRS0EFbf2yIWyK",
     },
     {
-      name: "Calabar",
+      name: "Calabar (Paul Promise)",
       link: "https://chat.whatsapp.com/HQVXqHxPRbsDvadFON3C6O",
     },
     {
@@ -41,7 +41,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/GzJI9GS6pgA1d0nehhwAMU",
     },
     {
-      name: "Dutse",
+      name: "Dutse (Ismail Abdulkadir)",
       link: "https://chat.whatsapp.com/Et24mvLQyDGJRDg4dDFOhY",
     },
     {
@@ -53,11 +53,11 @@ const Form = () => {
       link: "https://chat.whatsapp.com/FkFyhmLMpNo3UUeL666kM9",
     },
     {
-      name: "Enugu",
+      name: "Enugu (Ibrahim Kehinde)",
       link: "https://chat.whatsapp.com/HrrYYIEaHRS0EFbf2yIWyK",
     },
     {
-      name: "Ibadan (Abdullahi Babatunde)",
+      name: "Ibadan - Univeristy of Ibadan (Abdullahi Babatunde)",
       link: "https://chat.whatsapp.com/CaKIwXXzKgiAMY7H6F9kbk",
     },
     {
@@ -65,7 +65,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/Jw7SDFw0bnN7qgC4jzhFBl",
     },
     {
-      name: "Jos (Akanni Sherifdeen)",
+      name: "Jos - UNIJOS (Akanni Sherifdeen)",
       link: "https://chat.whatsapp.com/Jkaz6VufPa2DtjFxrl509G",
     },
     {
@@ -89,7 +89,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/GzAmbYyem4a4eobOz603a6",
     },
     {
-      name: "Ndola",
+      name: "Ndola (Taonga Kapira)",
       link: "https://chat.whatsapp.com/EwoUnczJdHE0zM6vC2406s",
     },
     {
@@ -109,7 +109,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/J0JOxIMtgamGFwDIFoZ7Nw",
     },
     {
-      name: "Osogbo",
+      name: "Osogbo - Fountain University (Nurudeen Noor-Al-Hudah)",
       link: "https://chat.whatsapp.com/G4pvLWMxnXuDxZxOlljFrj",
     },
     {
@@ -121,11 +121,11 @@ const Form = () => {
       link: "https://chat.whatsapp.com/LJJprHXAVXnE53VjgXtK0w",
     },
     {
-      name: "Sokoto (Abdulbaki Alfa-Ibrahim)",
+      name: "Sokoto - UDUS (Abdulbaki Alfa-Ibrahim)",
       link: "https://chat.whatsapp.com/GAss9ow8IHg43MooW4aXwA",
     },
     {
-      name: "Sokoto - UDUS (Ahmad AbdulKadir)",
+      name: "Sokoto (Ahmad AbdulKadir)",
       link: "https://chat.whatsapp.com/G11txorkFUb1e9MQheryKx",
     },
     {
@@ -137,7 +137,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/Ic8SSFyxdIsGLkjqxaz1P8",
     },
     {
-      name: "Tunis",
+      name: "Tunisia (Yosra Gabsi)",
       link: "https://chat.whatsapp.com/Ef7AXBo1wxlLQNSthWZ3dh",
     },
   ];
