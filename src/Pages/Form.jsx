@@ -21,7 +21,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/IpzdTLTVCqYBR0DgmuPDAM",
     },
     {
-      name: "Abuja (Okwuchi Flora)",
+      name: "Abuja - Veritas University (Okwuchi Flora)",
       link: "https://chat.whatsapp.com/Gafk8D32GrE0P6gEktE0mV",
     },
     {
@@ -113,11 +113,11 @@ const Form = () => {
       link: "https://chat.whatsapp.com/G4pvLWMxnXuDxZxOlljFrj",
     },
     {
-      name: "Port Harcourt",
+      name: "Port Harcourt (Dr. Blessing Odogwu)",
       link: "https://chat.whatsapp.com/KE7KDrnhIQlGgPIiK9xG84",
     },
     {
-      name: "Rawalpindi (Pakistan)",
+      name: "Rawalpindi (Dr. Yasir)",
       link: "https://chat.whatsapp.com/LJJprHXAVXnE53VjgXtK0w",
     },
     {
@@ -129,7 +129,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/G11txorkFUb1e9MQheryKx",
     },
     {
-      name: "TASUED",
+      name: "TASUED (Adeyemi Omotayo)",
       link: "https://chat.whatsapp.com/KfE1IOz4svD4xR4hMxEDEI",
     },
     {
