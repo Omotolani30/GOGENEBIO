@@ -25,7 +25,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/Gafk8D32GrE0P6gEktE0mV",
     },
     {
-      name: "Ado-Ekiti",
+      name: "Ado-Ekiti - EKSUTH",
       link: "https://chat.whatsapp.com/KmU8oIPkjWXD7fyxhmjkFZ",
     },
     {
@@ -49,7 +49,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/Cglpzmmh6pbBTIryN4Ux6L",
     },
     {
-      name: "Ekpoma",
+      name: "Ekpoma - AAU",
       link: "https://chat.whatsapp.com/FkFyhmLMpNo3UUeL666kM9",
     },
     {
@@ -77,15 +77,15 @@ const Form = () => {
       link: "https://chat.whatsapp.com/H6GOrIL4hY8DdWgRsrosBT",
     },
     {
-      name: "Lagos (John Chidozie)",
+      name: "Lagos - UNILAG (John Chidozie)",
       link: "https://chat.whatsapp.com/JbtE8Ct3pVgG3eGnGMCjfx",
     },
     {
-      name: "Los Baños",
+      name: "Los Baños - UP (Howard Gabriel)",
       link: "https://chat.whatsapp.com/F64M5z1jE7VKCqRoBcCSv0",
     },
     {
-      name: "Nairobi",
+      name: "Nairobi (Vickor Masai)",
       link: "https://chat.whatsapp.com/GzAmbYyem4a4eobOz603a6",
     },
     {
@@ -101,7 +101,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/CkLORp3hpY9GpTZqbF8wKF",
     },
     {
-      name: "Ogun (Faniyi Olakunle)",
+      name: "Ogun - FUNAAB (Faniyi Olakunle)",
       link: "https://chat.whatsapp.com/BI8Zq2sTLoJGLOISIJzPJv",
     },
     {
@@ -133,7 +133,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/KfE1IOz4svD4xR4hMxEDEI",
     },
     {
-      name: "Taraba",
+      name: "Taraba (Otoh Ene)",
       link: "https://chat.whatsapp.com/Ic8SSFyxdIsGLkjqxaz1P8",
     },
     {
