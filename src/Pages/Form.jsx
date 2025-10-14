@@ -50,7 +50,7 @@ const Form = () => {
     },
     {
       name: "Ekpoma - AAU",
-      link: "https://chat.whatsapp.com/FkFyhmLMpNo3UUeL666kM9",
+      link: "https://chat.whatsapp.com/KEeoMIl1XMgDQaBBjdGV4U",
     },
     {
       name: "Enugu (Ibrahim Kehinde)",
