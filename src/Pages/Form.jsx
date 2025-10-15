@@ -65,12 +65,8 @@ const Form = () => {
       link: "https://chat.whatsapp.com/Jw7SDFw0bnN7qgC4jzhFBl",
     },
     {
-      name: "Jos - UNIJOS (Akanni Sherifdeen)",
+      name: "Jos - UNIJOS (Akanni Sherifdeen and Fancy Ishaku)",
       link: "https://chat.whatsapp.com/Jkaz6VufPa2DtjFxrl509G",
-    },
-    {
-      name: "Jos (Fancy Ishaku)",
-      link: "https://chat.whatsapp.com/HaVKsQ4pDslE3lgmG95haN",
     },
     {
       name: "Lagos (Ashimolowo Agape)",
