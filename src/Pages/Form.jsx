@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { supabase } from "../../supabaseClient";
+import { Link } from "react-router-dom";
+
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -176,7 +178,7 @@ const Form = () => {
         Application Form
       </h2>
 
-      <form className="flex flex-col gap-10 md:gap-20" onSubmit={handleSubmit}>
+      <form className="flex flex-col gap-10 md:gap-15" onSubmit={handleSubmit}>
         <div className="grid gap-5">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm md:text-lg">
             {/* Full Name */}
@@ -189,7 +191,7 @@ const Form = () => {
                 value={formData.full_name}
                 onChange={handleChange}
                 required
-                placeholder="Type your first name"
+                placeholder="Type your full name"
               />
             </div>
 
@@ -281,13 +283,20 @@ const Form = () => {
           </div>
         </div>
 
-        <button
-          className="bg-gradient-to-r from-[#511E8C] to-[#9D3CA7] rounded-full p-2 text-sm md:text-lg text-white cursor-pointer"
-          type="submit"
-          disabled={loading}
-        >
-          {loading ? "Submitting..." : "Submit Application"}
-        </button>
+        <div className="flex justify-between">
+          <Link to="/">
+            <button className="border border-[#9D3CA7] rounded-full p-2 px-2.5 md:p-2.5 md:px-4 text-[14px] md:text-[16px] cursor-pointer">
+              Back to Home
+            </button>
+          </Link>
+          <button
+            className="bg-gradient-to-r from-[#511E8C] to-[#9D3CA7] rounded-full p-2 px-2.5 md:p-2.5 md:px-4 text-[14px] md:text-[16px] text-white cursor-pointer"
+            type="submit"
+            disabled={loading}
+          >
+            {loading ? "Submitting..." : "Submit Application"}
+          </button>
+        </div>
       </form>
 
       {message && <p className="mt-5 text-center">{message}</p>}
