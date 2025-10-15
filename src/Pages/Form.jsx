@@ -202,7 +202,7 @@ const Form = () => {
               <label className="font-medium">Phone Number</label>
               <input
                 className="border border-[#DFDFDFDF] p-2 rounded-lg placeholder:text-xs md:placeholder:text-sm focus:outline-none"
-                type="text"
+                type="number"
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
