@@ -115,7 +115,7 @@ const Form = () => {
       link: "https://chat.whatsapp.com/KE7KDrnhIQlGgPIiK9xG84",
     },
     {
-      name: "Rawalpindi (Dr. Yasir)",
+      name: "Pakistan (Dr. Yasir)",
       link: "https://chat.whatsapp.com/LJJprHXAVXnE53VjgXtK0w",
     },
     {
