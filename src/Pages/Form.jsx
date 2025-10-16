@@ -111,12 +111,12 @@ const Form = () => {
       link: "https://chat.whatsapp.com/G4pvLWMxnXuDxZxOlljFrj",
     },
     {
-      name: "Port Harcourt (Dr. Blessing Odogwu)",
-      link: "https://chat.whatsapp.com/KE7KDrnhIQlGgPIiK9xG84",
-    },
-    {
       name: "Pakistan (Dr. Yasir)",
       link: "https://chat.whatsapp.com/LJJprHXAVXnE53VjgXtK0w",
+    },
+    {
+      name: "Port Harcourt (Dr. Blessing Odogwu)",
+      link: "https://chat.whatsapp.com/KE7KDrnhIQlGgPIiK9xG84",
     },
     {
       name: "Sokoto - UDUS (Abdulbaki Alfa-Ibrahim)",
