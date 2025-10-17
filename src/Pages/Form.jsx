@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { supabase } from "../../supabaseClient";
 import { Link } from "react-router-dom";
 
-
 const Form = () => {
   const [formData, setFormData] = useState({
     full_name: "",
@@ -156,7 +155,13 @@ const Form = () => {
     const { error } = await supabase.from("registrations").insert([formData]);
 
     if (error) {
-      setMessage("Something went wrong: " + error.message);
+      if (error.code === "23505") {
+        setMessage(
+          "You've already registered using this email or phone number."
+        );
+      } else {
+        setMessage("Something went wrong: " + error.message);
+      }
       setLoading(false);
       return;
     }
@@ -177,6 +182,8 @@ const Form = () => {
       <h2 className="font-semibold text-2xl md:text-4xl text-center mb-10">
         Application Form
       </h2>
+
+      {message && <p className="mb-5 text-center text-red-500 text-xl font-bold">{message}</p>}
 
       <form className="flex flex-col gap-10 md:gap-15" onSubmit={handleSubmit}>
         <div className="grid gap-5">
@@ -298,8 +305,6 @@ const Form = () => {
           </button>
         </div>
       </form>
-
-      {message && <p className="mt-5 text-center">{message}</p>}
     </div>
   );
 };
