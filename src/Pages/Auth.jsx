@@ -12,60 +12,57 @@ const Auth = () => {
     setLoading(true);
     setMessage("");
 
-    try {
-      const normalizedEmail = email.trim().toLowerCase();
-      const { data: userData, error: emailError } = await supabase
-        .from("registrations")
-        .select("id,email")
-        .ilike("email", normalizedEmail)
-        .maybeSingle();
+    // Log the email we're searching for
+    console.log("Searching for email:", email.trim().toLowerCase());
 
-      if (emailError) {
-        console.error("Email verification error:", emailError);
-        setMessage("Error checking email. Try again later.");
+    try {
+      // Simple direct query
+      const { data, error } = await supabase
+        .from("registrations")
+        .select("*")
+        .eq("email", email.trim().toLowerCase());
+
+      // Log the full response
+      console.log("Supabase response:", { data, error });
+
+      if (error) {
+        setMessage("Database error: " + error.message);
         return;
       }
 
-      if (!userData) {
-        setMessage("Email not found, certificate cannot be generated.");
+      if (!data || data.length === 0) {
+        setMessage("Email not found. Please check and try again.");
         return;
       }
 
       if (testimonial.trim()) {
         const { error: testimonialError } = await supabase
           .from("testimonials")
-          .insert([
-            {
-              testimonial: testimonial.trim(),
-            },
-          ])
-          .select();
+          .insert([{ testimonial: testimonial.trim() }]);
 
         if (testimonialError) {
-          console.error("Testimonial error:", testimonialError);
-          return;
+          console.log("Testimonial error:", testimonialError);
         }
       }
 
-      const certificateWebsiteURL =
-        "https://genomac-certificate-generator.vercel.app/certificate/U2FsdGVkX1%2B%2BsgRH%2F5hCPemkQbAkPbGBBOZFNjAqm%2FYiproaoQxq4v23hQJc2qRtrOtoXQdjTaUPuhJ0I9rMCTbjWfMry0mWpv18y7isq%2FjBleM70oAEZDJ42NXhWxycTOTQtu09A%2FGu%2FdnkuFawSGvdrFEb%2FYrSvycDUlov7bYBj1fuy7BTjV5yjrSQV%2F4DpiTKCophcIHhiKbUo1yKpsrhhvXFv2pQgs64iuR9zTqBh%2BHJZ%2Fi2XW5T8%2BFdp5d%2BSwv5z4HRCykorxhPlkNpm4EoqcM7BQ6RH9q9Eb%2Bf2bI%3D";
-      window.location.href = certificateWebsiteURL;
+      window.location.href = "https://bit.ly/47LWPE7";
     } catch (err) {
-      console.error("Verification error:", err);
-      setMessage("An unexpected error occurred. Please try again.");
+      console.log("Error:", err);
+      setMessage("Error checking email: " + err.message);
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 py-12 transition-colors">
-      <div className="w-full max-w-lg bg-[#511E8C]/10 rounded-3xl shadow-md p-6 sm:p-8 md:p-10">
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-4">
-          Verification
-        </h2>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="w-full max-w-md bg-white rounded-2xl space-y-4 shadow-lg p-6">
+        <div className="space-y-2 text-center">
+          <h2 className="text-2xl font-bold">Verify Email</h2>
+          <p className="text-sm">Please verify your email to access your certificate</p>
+        </div>
 
-        <form onSubmit={handleVerify} className="flex flex-col gap-4">
+        <form onSubmit={handleVerify} className="space-y-4 mt-4">
           <label className="flex flex-col gap-2">
             <span className="font-medium text-sm">
               Email Address <span className="text-red-500">*</span>
@@ -73,7 +70,7 @@ const Auth = () => {
             <input
               type="email"
               className="w-full border rounded-lg p-3 focus:outline-none"
-              placeholder="Registered email address..."
+              placeholder="Registered email address"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -81,31 +78,25 @@ const Auth = () => {
           </label>
 
           <label className="flex flex-col gap-2">
-            <span className="font-medium text-sm">
-              Testimonial {""}
-              <span className="text-red-500">*</span>
-            </span>
+            <span className="font-medium text-sm">Testimonial</span>
             <textarea
               className="w-full border rounded-lg p-3 h-28 focus:outline-none"
-              placeholder="We would love to hear from you..."
+              placeholder="Share your experience..."
               value={testimonial}
               onChange={(e) => setTestimonial(e.target.value)}
-              required
             />
           </label>
 
           <button
-            className="mt-2 w-full md:w-auto mx-auto bg-gradient-to-r from-[#511E8C] to-[#9D3CA7] rounded-full p-3 px-6 text-white disabled:opacity-50"
             type="submit"
             disabled={loading}
+            className="w-full bg-gradient-to-r from-[#511E8C] to-[#9D3CA7] rounded-lg text-white p-2 cursor-pointer"
           >
-            {loading ? "Checking..." : "Verify & Continue"}
+            {loading ? "Checking..." : "Verify"}
           </button>
         </form>
 
-        {message && (
-          <p className="mt-4 text-center text-sm text-red-600">{message}</p>
-        )}
+        {message && <p className="mt-4 text-red-500 text-sm">{message}</p>}
       </div>
     </div>
   );
