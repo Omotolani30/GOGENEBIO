@@ -96,7 +96,7 @@ const Auth = () => {
           </button>
         </form>
 
-        {message && <p className="mt-4 text-red-500 text-sm">{message}</p>}
+        {message && <p className="mt-4 text-red-500 text-center text-sm">{message}</p>}
       </div>
     </div>
   );
