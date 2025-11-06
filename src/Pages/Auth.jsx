@@ -45,7 +45,7 @@ const Auth = () => {
         }
       }
 
-      window.location.href = "https://bit.ly/47LWPE7";
+      window.location.href = "https://genomac-certificate-generator.vercel.app/certificate/U2FsdGVkX1%2F5E10bkyBZYP68XUiKaoklAWLSPa%2BoLdXke309STnmUpILZfA2goc3Kf4BVnUICq6fTyKSJBKEurtltM%2BUaIRql1%2BJzcQi1eebHIeG%2BJc6MNxMgKD1SmtEJ3l2DxZxMLkzS%2Bejpfj998mTk7xTzfkEsPALRupt5AWnu0myFCDQgjt7Av7%2FEOvXcQX%2BD%2BJ3hnmMLY29xr2RiPSzdEu8o%2FGUVqHF7W%2BHFHXXRTSWrxeJEIX0CCEv4Y4zQms0BVxgG1YNndjnL%2B5ApIIWv3w3ZV9BIkpLtnFO8mo%3D";
     } catch (err) {
       console.log("Error:", err);
       setMessage("Error checking email: " + err.message);
